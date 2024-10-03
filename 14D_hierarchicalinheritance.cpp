@@ -1,44 +1,36 @@
 //Mukesh Rothe 23070123089
-# include<iostream>
+#include<iostream>
 using namespace std;
-class Galaxy {
-    public:
-    string gy,wy,gr,cr;
-    void gl(){
-        cout<<"Which Galaxy: "<<endl;
-        cin>>gy>>wy;
+class Bike
+{   public:
+    void Horsepower()
+    {
+        cout<<"Higher horsepower means higher speed."<<endl;
     }
-    void display(){
-        cout<< "Galaxy: "<< gy<<" "<<wy<<endl;
-        cout << "Group: "<<gr<<" "<<cr<<endl;
+};
+class Avenis : public Bike
+{
+    public:
+    void small()
+    {
+        cout<<"Avenis has 9 bhp."<<endl;
+    }
+};
+class RE_Shotgun_650 : public Bike
+{   public:
+    void big()
+    {
+        cout<<"Shotgun 650 has 40 bhp."<<endl;
     }
 };
 
-class Earth: public Galaxy{
-    public:
-    void gp(){
-        cout<< "Which Group: "<<endl;
-        cin>>gr>>cr;
-        cout << "Group: "<<gr<<" "<<cr<<endl;
-    }
-};
-class NGC: public Galaxy{
-       public:
-    
-    void go(){
-        cout<< "Which Group: "<<endl;
-        cin>>gr>>cr;
-    }
-};
-
-int main(){
-    Earth d;
-    NGC c;
-    d.gl();
-    d.gp();
-    d.display();
-    c.gl();
-    c.go();
-    c.display();
+int main()
+{
+    Avenis d;
+    RE_Shotgun_650 c;
+    d.Horsepower();
+    d.small();
+    c.Horsepower();
+    c.big();
     return 0;
 }
