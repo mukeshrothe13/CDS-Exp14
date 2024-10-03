@@ -5,7 +5,7 @@ class Galaxy {
     public:
     string gy,wy,gr,cr;
     void gl(){
-        cout<<" Which Galaxy: "<<endl;
+        cout<<"Which Galaxy: "<<endl;
         cin>>gy>>wy;
     }
     void display(){
